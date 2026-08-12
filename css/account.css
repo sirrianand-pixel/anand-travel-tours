@@ -1,0 +1,580 @@
+/* ==========================================================
+   ANAND TRAVEL TOURS
+   ACCOUNT PAGE
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f5f7fb;
+
+    color: #222;
+
+    min-height: 100vh;
+}
+
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.account-nav {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 14px 40px;
+
+    background: white;
+
+    box-shadow:
+        0 4px 20px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+
+.account-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #071d35;
+
+    font-weight: 700;
+
+    font-size: 18px;
+}
+
+
+.account-logo img {
+    width: 55px;
+
+    height: 40px;
+
+    object-fit: contain;
+}
+
+
+.nav-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.nav-link {
+    text-decoration: none;
+
+    color: #071d35;
+
+    padding: 9px 14px;
+
+    border-radius: 7px;
+
+    font-weight: 600;
+}
+
+
+.nav-link:hover {
+    background: #f1f3f5;
+}
+
+
+.logout-btn {
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    background: #dc3545;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+.logout-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* ==========================================================
+   MAIN
+========================================================== */
+
+.account-container {
+    width: min(
+        1000px,
+        calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+
+    padding: 55px 0 70px;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+
+.page-header span {
+    color: #0D6EFD;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.page-header h1 {
+    margin-top: 7px;
+
+    color: #071d35;
+
+    font-size: 38px;
+}
+
+
+.page-header p {
+    margin-top: 8px;
+
+    color: #71777e;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================================
+   STATE
+========================================================== */
+
+.state-message {
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: white;
+
+    text-align: center;
+
+    color: #666;
+
+    box-shadow:
+        0 8px 25px rgba(
+            0,
+            0,
+            0,
+            0.06
+        );
+}
+
+
+.state-message.error {
+    background: #f8d7da;
+
+    color: #842029;
+}
+
+
+/* ==========================================================
+   PROFILE
+========================================================== */
+
+.profile-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 28px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(
+            0,
+            0,
+            0,
+            0.07
+        );
+}
+
+
+.profile-avatar {
+    width: 85px;
+
+    height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f1ff;
+
+    font-size: 40px;
+
+    flex-shrink: 0;
+}
+
+
+.profile-info h2 {
+    color: #071d35;
+
+    font-size: 26px;
+
+    margin-bottom: 6px;
+}
+
+
+.profile-info p {
+    color: #6f767d;
+
+    margin-top: 4px;
+}
+
+
+#roleBadge {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: #e7f1ff;
+
+    color: #0D6EFD;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: capitalize;
+}
+
+
+/* ==========================================================
+   PERSONAL DETAILS
+========================================================== */
+
+.details-card {
+    margin-top: 25px;
+
+    padding: 28px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(
+            0,
+            0,
+            0,
+            0.07
+        );
+}
+
+
+.details-card h2,
+.stats-section h2 {
+    color: #071d35;
+
+    margin-bottom: 22px;
+
+    font-size: 23px;
+}
+
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.detail-item {
+    padding: 17px;
+
+    border-radius: 10px;
+
+    background: #f5f7fb;
+}
+
+
+.detail-item span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #7a8087;
+
+    font-size: 12px;
+}
+
+
+.detail-item strong {
+    color: #333;
+
+    word-break: break-word;
+}
+
+
+/* ==========================================================
+   BOOKING STATS
+========================================================== */
+
+.stats-section {
+    margin-top: 30px;
+}
+
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.stat-card {
+    padding: 23px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(
+            0,
+            0,
+            0,
+            0.06
+        );
+
+    text-align: center;
+
+    border-top: 4px solid #0D6EFD;
+}
+
+
+.stat-card.confirmed {
+    border-top-color: #198754;
+}
+
+
+.stat-card.pending {
+    border-top-color: #ffc107;
+}
+
+
+.stat-card.cancelled {
+    border-top-color: #dc3545;
+}
+
+
+.stat-icon {
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+
+.stat-card span {
+    display: block;
+
+    color: #71777e;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+
+.stat-card strong {
+    display: block;
+
+    color: #071d35;
+
+    font-size: 30px;
+}
+
+
+/* ==========================================================
+   ACTIONS
+========================================================== */
+
+.account-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.primary-btn {
+    background: #0D6EFD;
+
+    color: white;
+}
+
+
+.primary-btn:hover {
+    opacity: 0.9;
+}
+
+
+.secondary-btn {
+    background: white;
+
+    color: #071d35;
+
+    border: 1px solid #d9dfe6;
+}
+
+
+.secondary-btn:hover {
+    background: #f5f7fb;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 800px) {
+
+    .account-nav {
+        padding: 12px 20px;
+    }
+
+
+    .account-logo span {
+        display: none;
+    }
+
+
+    .account-container {
+        width: calc(
+            100% - 25px
+        );
+
+        padding-top: 35px;
+    }
+
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .nav-link {
+        display: none;
+    }
+
+
+    .profile-card {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .account-actions {
+        flex-direction: column;
+    }
+
+
+    .primary-btn,
+    .secondary-btn {
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Admin Dashboard - Anand Travel Tours
+</title>
+
+<link
+    rel="stylesheet"
+    href="../css/admin.css"
+>
+```
+
+</head>
+
+<body>
+
+```
+<!-- ==================================================
+     ADMIN LAYOUT
+=================================================== -->
+
+<div class="admin-layout">
+
+
+    <!-- ==================================================
+         SIDEBAR
+    =================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <img
+                src="../images/logo.jpg"
+                alt="Anand Travel Tours"
+            >
+
+            <h2>
+                Admin Panel
+            </h2>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="admin-nav">
+
+
+            <a
+                href="#dashboard"
+                class="active"
+                data-section="dashboard"
+            >
+                📊 Dashboard
+            </a>
+
+
+            <a
+                href="#bookings"
+                data-section="bookings"
+            >
+                📋 Bookings
+            </a>
+
+
+            <a
+                href="#packages"
+                data-section="packages"
+            >
+                🧳 Packages
+            </a>
+
+
+            <a
+                href="#users"
+                data-section="users"
+            >
+                👥 Users
+            </a>
+
+
+        </nav>
+
+
+        <!-- LOGOUT -->
+
+        <button
+            class="logout-btn"
+            id="logoutBtn"
+            type="button"
+        >
+            Logout
+        </button>
+
+
+    </aside>
+
+
+
+    <!-- ==================================================
+         MAIN CONTENT
+    =================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- ==================================================
+             DASHBOARD SECTION
+        =================================================== -->
+
+        <section
+            id="dashboardSection"
+            class="admin-section active-section"
+        >
+
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Welcome back, Admin
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ==================================================
+                 STATISTICS
+            =================================================== -->
+
+            <section class="stats-grid">
+
+
+                <!-- TOTAL USERS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Users
+                        </p>
+
+                        <h2 id="totalUsers">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TOTAL PACKAGES -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🧳
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Packages
+                        </p>
+
+                        <h2 id="totalPackages">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TOTAL BOOKINGS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📋
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Bookings
+                        </p>
+
+                        <h2 id="totalBookings">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REVENUE -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        💰
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Revenue
+                        </p>
+
+                        <h2 id="revenue">
+                            ₹0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 BOOKING OVERVIEW
+            =================================================== -->
+
+            <section class="status-section">
+
+                <h2>
+                    Booking Overview
+                </h2>
+
+
+                <div class="status-grid">
+
+
+                    <!-- PENDING -->
+
+                    <div
+                        class="status-card pending"
+                    >
+
+                        <span>
+                            Pending
+                        </span>
+
+                        <strong id="pendingBookings">
+                            0
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- CONFIRMED -->
+
+                    <div
+                        class="status-card confirmed"
+                    >
+
+                        <span>
+                            Confirmed
+                        </span>
+
+                        <strong id="confirmedBookings">
+                            0
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- CANCELLED -->
+
+                    <div
+                        class="status-card cancelled"
+                    >
+
+                        <span>
+                            Cancelled
+                        </span>
+
+                        <strong id="cancelledBookings">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 DASHBOARD RECENT BOOKINGS
+            =================================================== -->
+
+            <section class="bookings-section">
+
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Recent Bookings
+                        </h2>
+
+                        <p>
+                            Manage customer tour reservations
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="section-action-btn"
+                        data-section-target="bookings"
+                    >
+                        View All Bookings
+                    </button>
+
+                </div>
+
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    ID
+                                </th>
+
+                                <th>
+                                    Customer
+                                </th>
+
+                                <th>
+                                    Package
+                                </th>
+
+                                <th>
+                                    Travel Date
+                                </th>
+
+                                <th>
+                                    Persons
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="dashboardBookingsTable">
+
+                            <tr>
+
+                                <td colspan="7">
+                                    Loading bookings...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             BOOKINGS SECTION
+        =================================================== -->
+
+        <section
+            id="bookingsSection"
+            class="admin-section"
+        >
+
+
+            <!-- HEADER -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>
+                        Bookings
+                    </h1>
+
+                    <p>
+                        Manage customer tour reservations
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- BOOKINGS -->
+
+            <section class="bookings-section">
+
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            All Bookings
+                        </h2>
+
+                        <p>
+                            View and manage all customer reservations
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    ID
+                                </th>
+
+                                <th>
+                                    Customer
+                                </th>
+
+                                <th>
+                                    Package
+                                </th>
+
+                                <th>
+                                    Travel Date
+                                </th>
+
+                                <th>
+                                    Persons
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="bookingsTable">
+
+                            <tr>
+
+                                <td colspan="7">
+                                    Loading bookings...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PACKAGES SECTION
+        =================================================== -->
+
+        <section
+            id="packagesSection"
+            class="admin-section"
+        >
+
+
+            <!-- HEADER -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>
+                        Packages
+                    </h1>
+
+                    <p>
+                        Manage your travel packages
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- PACKAGE MANAGEMENT -->
+
+            <section class="packages-section">
+
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Tour Packages
+                        </h2>
+
+                        <p>
+                            Add, edit and delete travel packages
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="addPackageBtn"
+                        class="add-package-btn"
+                    >
+                        + Add New Package
+                    </button>
+
+                </div>
+
+
+
+                <!-- PACKAGE GRID -->
+
+                <div
+                    id="packagesGrid"
+                    class="packages-grid"
+                >
+
+                    <div class="package-loading">
+
+                        Loading packages...
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             USERS SECTION
+        =================================================== -->
+
+        <section
+            id="usersSection"
+            class="admin-section"
+        >
+
+
+            <!-- HEADER -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>
+                        Users
+                    </h1>
+
+                    <p>
+                        Manage registered customers and administrators
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- USERS -->
+
+            <section class="users-section">
+
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            User Management
+                        </h2>
+
+                        <p>
+                            Registered users will appear here
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    ID
+                                </th>
+
+                                <th>
+                                    Name
+                                </th>
+
+                                <th>
+                                    Email
+                                </th>
+
+                                <th>
+                                    Role
+                                </th>
+
+                                <th>
+                                    Registered
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="usersTable">
+
+                            <tr>
+
+                                <td colspan="6">
+
+                                    User management API
+                                    will be connected here.
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ADMIN MESSAGE
+        =================================================== -->
+
+        <div
+            id="adminMessage"
+            class="admin-message"
+        ></div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     BOOKING DETAILS MODAL
+=================================================== -->
+
+<div
+    id="bookingModal"
+    class="booking-modal"
+>
+
+
+    <div class="booking-modal-content">
+
+
+        <!-- CLOSE -->
+
+        <button
+            class="modal-close"
+            id="closeBookingModal"
+            type="button"
+            aria-label="Close booking details"
+        >
+            &times;
+        </button>
+
+
+        <!-- TITLE -->
+
+        <h2>
+            Booking Details
+        </h2>
+
+
+        <!-- DETAILS -->
+
+        <div id="bookingDetails">
+
+            Loading details...
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     PACKAGE MODAL
+=================================================== -->
+
+<div
+    id="packageModal"
+    class="package-modal"
+>
+
+
+    <div class="package-modal-content">
+
+
+        <!-- CLOSE -->
+
+        <button
+            type="button"
+            id="closePackageModal"
+            class="package-modal-close"
+            aria-label="Close package form"
+        >
+            &times;
+        </button>
+
+
+        <!-- TITLE -->
+
+        <h2 id="packageModalTitle">
+            Add New Package
+        </h2>
+
+
+        <!-- FORM -->
+
+        <form
+            id="packageForm"
+            autocomplete="off"
+        >
+
+
+            <!-- HIDDEN ID -->
+
+            <input
+                type="hidden"
+                id="packageId"
+            >
+
+
+            <!-- TITLE -->
+
+            <div class="form-group">
+
+                <label for="packageTitle">
+                    Package Title
+                </label>
+
+                <input
+                    type="text"
+                    id="packageTitle"
+                    placeholder="Example: Goa Beach Escape"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- DESTINATION -->
+
+            <div class="form-group">
+
+                <label for="packageDestination">
+                    Destination
+                </label>
+
+                <input
+                    type="text"
+                    id="packageDestination"
+                    placeholder="Example: Goa, India"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-group">
+
+                <label for="packageDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="packageDescription"
+                    rows="4"
+                    placeholder="Describe the tour package..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- DURATION -->
+
+            <div class="form-group">
+
+                <label for="packageDuration">
+                    Duration
+                </label>
+
+                <input
+                    type="text"
+                    id="packageDuration"
+                    placeholder="Example: 3 Days / 2 Nights"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- PERSONS -->
+
+            <div class="form-group">
+
+                <label for="packagePersons">
+                    Number of Persons
+                </label>
+
+                <input
+                    type="number"
+                    id="packagePersons"
+                    min="1"
+                    value="2"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- PRICE -->
+
+            <div class="form-group">
+
+                <label for="packagePrice">
+                    Price (₹)
+                </label>
+
+                <input
+                    type="number"
+                    id="packagePrice"
+                    min="0"
+                    step="0.01"
+                    placeholder="8999"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- TAG -->
+
+            <div class="form-group">
+
+                <label for="packageTag">
+                    Tag
+                </label>
+
+                <input
+                    type="text"
+                    id="packageTag"
+                    placeholder="Example: Popular"
+                >
+
+            </div>
+
+
+
+            <!-- IMAGE -->
+
+            <div class="form-group">
+
+                <label for="packageImage">
+                    Image Filename
+                </label>
+
+                <input
+                    type="text"
+                    id="packageImage"
+                    placeholder="Example: goa-package.jpg"
+                >
+
+                <small>
+                    Enter the image filename from the images folder.
+                </small>
+
+            </div>
+
+
+
+            <!-- FORM MESSAGE -->
+
+            <div
+                id="packageFormMessage"
+                class="package-form-message"
+            ></div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="package-form-actions">
+
+
+                <button
+                    type="button"
+                    id="cancelPackageBtn"
+                    class="package-cancel-btn"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="savePackageBtn"
+                    class="package-save-btn"
+                >
+                    Save Package
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+=================================================== -->
+
+<script
+    src="../js/admin.js"
+></script>
+
+
+<!-- ==================================================
+     SECTION NAVIGATION
+=================================================== -->
+
+<script>
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+
+            const navLinks =
+                document.querySelectorAll(
+                    ".admin-nav a[data-section]"
+                );
+
+
+            const sections = {
+
+                dashboard:
+                    document.getElementById(
+                        "dashboardSection"
+                    ),
+
+                bookings:
+                    document.getElementById(
+                        "bookingsSection"
+                    ),
+
+                packages:
+                    document.getElementById(
+                        "packagesSection"
+                    ),
+
+                users:
+                    document.getElementById(
+                        "usersSection"
+                    )
+
+            };
+
+
+            function showSection(
+                sectionName
+            ) {
+
+
+                // --------------------------------------
+                // HIDE ALL SECTIONS
+                // --------------------------------------
+
+                Object.values(
+                    sections
+                ).forEach(
+                    section => {
+
+                        if (section) {
+
+                            section.style.display =
+                                "none";
+
+                        }
+
+                    }
+                );
+
+
+                // --------------------------------------
+                // SHOW SELECTED SECTION
+                // --------------------------------------
+
+                if (
+                    sections[sectionName]
+                ) {
+
+                    sections[
+                        sectionName
+                    ].style.display =
+                        "block";
+
+                }
+
+
+                // --------------------------------------
+                // ACTIVE NAVIGATION
+                // --------------------------------------
+
+                navLinks.forEach(
+                    link => {
+
+                        link.classList.remove(
+                            "active"
+                        );
+
+
+                        if (
+                            link.dataset.section ===
+                            sectionName
+                        ) {
+
+                            link.classList.add(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                // --------------------------------------
+                // LOAD DATA WHEN NEEDED
+                // --------------------------------------
+
+                if (
+                    sectionName ===
+                    "bookings"
+                ) {
+
+                    if (
+                        typeof loadBookings ===
+                        "function"
+                    ) {
+
+                        loadBookings();
+
+                    }
+
+                }
+
+
+                if (
+                    sectionName ===
+                    "packages"
+                ) {
+
+                    if (
+                        typeof loadPackages ===
+                        "function"
+                    ) {
+
+                        loadPackages();
+
+                    }
+
+                }
+
+
+                // --------------------------------------
+                // UPDATE URL HASH
+                // --------------------------------------
+
+                if (
+                    window.location.hash !==
+                    `#${sectionName}`
+                ) {
+
+                    history.replaceState(
+                        null,
+                        "",
+                        `#${sectionName}`
+                    );
+
+                }
+
+            }
+
+
+
+            // --------------------------------------
+            // SIDEBAR CLICK EVENTS
+            // --------------------------------------
+
+            navLinks.forEach(
+                link => {
+
+                    link.addEventListener(
+                        "click",
+                        function (event) {
+
+                            event.preventDefault();
+
+
+                            const sectionName =
+                                this.dataset.section;
+
+
+                            showSection(
+                                sectionName
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+            // --------------------------------------
+            // VIEW ALL BOOKINGS BUTTON
+            // --------------------------------------
+
+            const viewAllBookingsBtn =
+                document.querySelector(
+                    '[data-section-target="bookings"]'
+                );
+
+
+            if (
+                viewAllBookingsBtn
+            ) {
+
+                viewAllBookingsBtn.addEventListener(
+                    "click",
+                    function () {
+
+                        showSection(
+                            "bookings"
+                        );
+
+                    }
+                );
+
+            }
+
+
+
+            // --------------------------------------
+            // HASH NAVIGATION
+            // --------------------------------------
+
+            function loadHashSection() {
+
+                const hash =
+                    window.location.hash
+                        .replace(
+                            "#",
+                            ""
+                        );
+
+
+                if (
+                    sections[hash]
+                ) {
+
+                    showSection(
+                        hash
+                    );
+
+                } else {
+
+                    showSection(
+                        "dashboard"
+                    );
+
+                }
+
+            }
+
+
+            // Initial section
+
+            loadHashSection();
+
+
+            // Browser back/forward
+
+            window.addEventListener(
+                "hashchange",
+                loadHashSection
+            );
+
+
+        }
+    );
+
+</script>
+```
+
+</body>
+
+</html>

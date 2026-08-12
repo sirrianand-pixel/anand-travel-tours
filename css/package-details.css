@@ -1,0 +1,493 @@
+/* ==========================================================
+   ANAND TRAVEL TOURS
+   PACKAGE DETAILS — FINAL
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f8fb,
+            #ffffff
+        );
+
+    color: #172b3a;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================================
+   MAIN
+========================================================== */
+
+.details-container {
+    width: 100%;
+    max-width: 1120px;
+
+    margin: 0 auto;
+
+    padding: 45px 24px;
+}
+
+/* Slightly shift right on larger screens */
+@media (min-width: 1200px) {
+    .details-container {
+        margin-left: calc((100% - 1120px) / 2 + 20px);
+        margin-right: auto;
+    }
+}
+
+/* ==========================================================
+   PACKAGE CARD
+========================================================== */
+
+.package-details-card {
+    width: 100%;
+
+    max-width: 1070px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 46% 54%;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 50px rgba(25, 55, 75, 0.12);
+
+    border: 1px solid #e8eef2;
+}
+
+
+/* ==========================================================
+   IMAGE CONTAINER
+========================================================== */
+
+.package-details-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 420px;
+
+    overflow: hidden;
+
+    background: #e8eef2;
+}
+
+
+/* ==========================================================
+   PACKAGE IMAGE
+========================================================== */
+
+.package-details-image img {
+    display: block;
+
+    width: 100% !important;
+
+    height: 420px !important;
+
+    max-width: 100% !important;
+
+    max-height: 420px !important;
+
+    min-width: 0 !important;
+
+    min-height: 0 !important;
+
+    object-fit: cover !important;
+
+    object-position: center;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    border: 0 !important;
+}
+
+
+/* ==========================================================
+   TAG
+========================================================== */
+
+.package-tag {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    z-index: 10;
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    background: rgba(13, 55, 80, 0.94);
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.package-details-content {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 42px 42px;
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.package-details-content h1 {
+    margin-bottom: 12px;
+
+    color: #173b52;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 40px;
+
+    line-height: 1.12;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   LOCATION
+========================================================== */
+
+.package-location {
+    margin-bottom: 18px;
+
+    color: #617581;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.package-location::before {
+    content: "📍 ";
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.package-description {
+    margin-bottom: 25px;
+
+    color: #667984;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   INFO
+========================================================== */
+
+.package-info {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-bottom: 27px;
+}
+
+
+.info-item {
+    min-width: 0;
+
+    padding: 14px 12px;
+
+    border: 1px solid #e5ecef;
+
+    border-radius: 12px;
+
+    background: #fbfcfd;
+}
+
+
+.info-item strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #8a989f;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+
+.info-item span {
+    display: block;
+
+    color: #263d4b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.info-item .package-price {
+    color: #b27b00;
+
+    font-size: 17px;
+
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   ACTIONS
+========================================================== */
+
+.package-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ==========================================================
+   BOOK NOW
+========================================================== */
+
+.book-now-btn {
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d6e91,
+            #07577b
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.book-now-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 22px rgba(13, 110, 145, 0.25);
+}
+
+
+/* ==========================================================
+   BACK
+========================================================== */
+
+.back-btn {
+    color: #687a84;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    color: #0d6e91;
+
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.loading {
+    padding: 80px 20px;
+
+    text-align: center;
+
+    color: #60727d;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.package-error {
+    max-width: 600px;
+
+    margin: 70px auto;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .details-container {
+        padding: 30px 18px;
+    }
+
+    .package-details-card {
+        grid-template-columns: 1fr;
+    }
+
+    .package-details-image {
+        height: 350px;
+    }
+
+    .package-details-image img {
+        height: 350px !important;
+
+        max-height: 350px !important;
+    }
+
+    .package-details-content {
+        padding: 32px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .details-container {
+        padding: 15px;
+    }
+
+    .package-details-card {
+        border-radius: 17px;
+    }
+
+    .package-details-image {
+        height: 250px;
+    }
+
+    .package-details-image img {
+        height: 250px !important;
+
+        max-height: 250px !important;
+    }
+
+    .package-details-content {
+        padding: 25px 20px;
+    }
+
+    .package-details-content h1 {
+        font-size: 30px;
+    }
+
+    .package-info {
+        grid-template-columns: 1fr;
+    }
+
+    .package-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .book-now-btn {
+        width: 100%;
+    }
+
+    .back-btn {
+        text-align: center;
+    }
+}

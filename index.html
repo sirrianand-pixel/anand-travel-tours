@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Anand Travel Tours - Discover beautiful destinations and carefully planned tour packages."
+    >
+
+    <title>
+        Anand Travel Tours | Explore. Experience. Remember.
+    </title>
+
+
+    <!-- ==================================================
+         GOOGLE FONTS
+    =================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==================================================
+         AOS
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
+
+
+    <!-- ==================================================
+         MAIN CSS
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body id="home">
+
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<nav
+    id="mainNav"
+    class="main-nav"
+>
+
+    <div class="nav-inner">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="#home"
+            class="brand"
+            aria-label="Anand Travel Tours Home"
+        >
+
+            <img
+                src="images/logo.jpg"
+                alt="Anand Travel Tours"
+            >
+
+            <div class="brand-text">
+
+                <strong>
+                    Anand Travel
+                </strong>
+
+                <span>
+                    TOURS & TRAVELS
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#destinations">
+                    Destinations
+                </a>
+            </li>
+
+            <li>
+                <a href="#packages">
+                    Packages
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- AUTH AREA -->
+
+        <div
+            class="nav-auth"
+            id="authButtons"
+        >
+
+            <!-- LOGGED OUT -->
+
+            <a
+                href="pages/login.html"
+                id="loginLink"
+                class="nav-login"
+            >
+                Login
+            </a>
+
+            <a
+                href="pages/register.html"
+                id="registerLink"
+                class="nav-register"
+            >
+                Register
+            </a>
+
+
+            <!-- LOGGED IN -->
+
+            <div
+                id="loggedInArea"
+                class="logged-in-area"
+                style="display: none;"
+            >
+
+                <span
+                    id="userWelcome"
+                    class="user-welcome"
+                >
+                </span>
+
+
+                <a
+                    href="pages/account.html"
+                    id="accountLink"
+                >
+                    My Account
+                </a>
+
+
+                <a
+                    href="pages/my-bookings.html"
+                    id="myBookingsLink"
+                >
+                    My Bookings
+                </a>
+
+
+                <a
+                    href="pages/admin.html"
+                    id="dashboardLink"
+                    style="display: none;"
+                >
+                    Admin Dashboard
+                </a>
+
+
+                <button
+                    type="button"
+                    id="logoutBtn"
+                    class="nav-logout-btn"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section
+    class="hero"
+    id="hero"
+>
+
+    <div class="hero-overlay"></div>
+
+
+    <div
+        class="hero-content"
+        data-aos="fade-up"
+    >
+
+        <span class="hero-eyebrow">
+            TRAVEL • EXPERIENCE • DISCOVER
+        </span>
+
+
+        <h1>
+
+            Your journey begins
+            <span>
+                here.
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Discover extraordinary destinations,
+            thoughtfully planned journeys and
+            unforgettable experiences with
+            Anand Travel Tours.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#packages"
+                class="btn-primary"
+            >
+                Explore Tours
+                <span>→</span>
+            </a>
+
+
+            <a
+                href="#destinations"
+                class="btn-secondary"
+            >
+                Discover Destinations
+            </a>
+
+        </div>
+
+
+        <div class="hero-trust">
+
+            <div>
+
+                <strong>
+                    100%
+                </strong>
+
+                <span>
+                    Memorable journeys
+                </span>
+
+            </div>
+
+
+            <div class="hero-divider"></div>
+
+
+            <div>
+
+                <strong>
+                    24/7
+                </strong>
+
+                <span>
+                    Travel assistance
+                </span>
+
+            </div>
+
+
+            <div class="hero-divider"></div>
+
+
+            <div>
+
+                <strong>
+                    Best
+                </strong>
+
+                <span>
+                    Planned experiences
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-scroll">
+
+        <span>
+            Scroll to explore
+        </span>
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUICK SEARCH
+====================================================== -->
+
+<section class="search-section">
+
+    <div
+        class="search-box"
+        data-aos="fade-up"
+    >
+
+        <div class="search-field">
+
+            <span class="search-icon">
+                📍
+            </span>
+
+            <div>
+
+                <label for="destination">
+                    Destination
+                </label>
+
+                <input
+                    type="text"
+                    id="destination"
+                    placeholder="Where do you want to go?"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="search-field">
+
+            <span class="search-icon">
+                📅
+            </span>
+
+            <div>
+
+                <label for="travelDate">
+                    Travel date
+                </label>
+
+                <input
+                    type="date"
+                    id="travelDate"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="search-field">
+
+            <span class="search-icon">
+                👥
+            </span>
+
+            <div>
+
+                <label for="persons">
+                    Travellers
+                </label>
+
+                <select id="persons">
+
+                    <option value="1">
+                        1 Person
+                    </option>
+
+                    <option value="2">
+                        2 Persons
+                    </option>
+
+                    <option value="3">
+                        3 Persons
+                    </option>
+
+                    <option value="4">
+                        4+ Persons
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="searchBtn"
+            class="search-btn"
+        >
+            Search Tours
+            <span>→</span>
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DESTINATIONS
+====================================================== -->
+
+<section
+    class="destinations section"
+    id="destinations"
+>
+
+    <div
+        class="section-heading"
+        data-aos="fade-up"
+    >
+
+        <span class="section-label">
+            DESTINATIONS
+        </span>
+
+        <h2>
+            Places worth
+            <em>remembering.</em>
+        </h2>
+
+        <p>
+            From sun-soaked beaches to peaceful
+            mountains, discover destinations that
+            deserve a place on your travel list.
+        </p>
+
+    </div>
+
+
+    <div class="destination-container">
+
+
+        <!-- GOA -->
+
+        <article
+            class="destination-card destination-large"
+            data-aos="fade-up"
+            data-aos-delay="50"
+        >
+
+            <img
+                src="images/destinations/goa.jpg"
+                alt="Goa"
+                loading="lazy"
+            >
+
+            <div class="destination-gradient"></div>
+
+            <div class="destination-content">
+
+                <span>
+                    BEACH ESCAPE
+                </span>
+
+                <h3>
+                    Goa
+                </h3>
+
+                <p>
+                    Sun, sand & unforgettable nights.
+                </p>
+
+                <button
+                    type="button"
+                    class="destination-btn destination-link"
+                    data-destination="Goa"
+                >
+                    Explore Goa
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- KASHMIR -->
+
+        <article
+            class="destination-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+
+            <img
+                src="images/destinations/kashmir.jpg"
+                alt="Kashmir"
+                loading="lazy"
+            >
+
+            <div class="destination-gradient"></div>
+
+            <div class="destination-content">
+
+                <span>
+                    MOUNTAIN ESCAPE
+                </span>
+
+                <h3>
+                    Kashmir
+                </h3>
+
+                <p>
+                    Paradise among the mountains.
+                </p>
+
+                <button
+                    type="button"
+                    class="destination-btn destination-link"
+                    data-destination="Kashmir"
+                >
+                    Explore
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- KERALA -->
+
+        <article
+            class="destination-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+        >
+
+            <img
+                src="images/destinations/kerala.jpg"
+                alt="Kerala"
+                loading="lazy"
+            >
+
+            <div class="destination-gradient"></div>
+
+            <div class="destination-content">
+
+                <span>
+                    BACKWATER ESCAPE
+                </span>
+
+                <h3>
+                    Kerala
+                </h3>
+
+                <p>
+                    Green landscapes and quiet waters.
+                </p>
+
+                <button
+                    type="button"
+                    class="destination-btn destination-link"
+                    data-destination="Kerala"
+                >
+                    Explore
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- MANALI -->
+
+        <article
+            class="destination-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+        >
+
+            <img
+                src="images/destinations/manali.jpg"
+                alt="Manali"
+                loading="lazy"
+            >
+
+            <div class="destination-gradient"></div>
+
+            <div class="destination-content">
+
+                <span>
+                    ADVENTURE ESCAPE
+                </span>
+
+                <h3>
+                    Manali
+                </h3>
+
+                <p>
+                    Mountains, snow and adventure.
+                </p>
+
+                <button
+                    type="button"
+                    class="destination-btn destination-link"
+                    data-destination="Manali"
+                >
+                    Explore
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE STRIP
+====================================================== -->
+
+<section class="experience-strip">
+
+    <div class="experience-inner">
+
+        <div class="experience-item">
+
+            <strong>
+                Curated
+            </strong>
+
+            <span>
+                Tour experiences
+            </span>
+
+        </div>
+
+
+        <div class="experience-item">
+
+            <strong>
+                Flexible
+            </strong>
+
+            <span>
+                Travel planning
+            </span>
+
+        </div>
+
+
+        <div class="experience-item">
+
+            <strong>
+                Personal
+            </strong>
+
+            <span>
+                Customer support
+            </span>
+
+        </div>
+
+
+        <div class="experience-item">
+
+            <strong>
+                Memorable
+            </strong>
+
+            <span>
+                Journeys
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PACKAGES
+====================================================== -->
+
+<section
+    class="packages section"
+    id="packages"
+>
+
+    <div
+        class="section-heading"
+        data-aos="fade-up"
+    >
+
+        <span class="section-label">
+            EXPLORE WITH US
+        </span>
+
+        <h2>
+            Journeys designed
+            <em>for you.</em>
+        </h2>
+
+        <p>
+            Carefully planned tour packages designed
+            to turn your next trip into a story worth
+            telling.
+        </p>
+
+    </div>
+
+
+    <!-- IMPORTANT:
+         main.js loads packages here.
+    -->
+
+    <div
+        class="package-container"
+        id="packageContainer"
+    >
+
+        <div class="package-loading">
+            Loading packages...
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+====================================================== -->
+
+<section
+    class="about section"
+    id="about"
+>
+
+    <div class="about-wrapper">
+
+
+        <!-- IMAGE / VISUAL -->
+
+        <div
+            class="about-visual"
+            data-aos="fade-right"
+        >
+
+            <div class="about-image-main">
+
+                <img
+                    src="images/destinations/kerala.jpg"
+                    alt="Travel experience"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="about-floating-card">
+
+                <strong>
+                    Travel with purpose.
+                </strong>
+
+                <span>
+                    Every journey should feel special.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div
+            class="about-content"
+            data-aos="fade-left"
+        >
+
+            <span class="section-label">
+                ABOUT ANAND TRAVEL TOURS
+            </span>
+
+
+            <h2>
+                We don't just plan
+                <em>trips.</em>
+                We create experiences.
+            </h2>
+
+
+            <p class="about-lead">
+
+                Anand Travel Tours is built around one
+                simple idea: travelling should be exciting,
+                comfortable and memorable.
+
+            </p>
+
+
+            <p>
+
+                From choosing the right destination to
+                discovering the places that make a journey
+                special, our goal is to make travel planning
+                simple and enjoyable.
+
+            </p>
+
+
+            <div class="about-values">
+
+                <div>
+
+                    <span class="value-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Thoughtful Planning
+                        </strong>
+
+                        <p>
+                            Carefully selected journeys
+                            for meaningful experiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <span class="value-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Honest Experiences
+                        </strong>
+
+                        <p>
+                            Clear packages designed
+                            around real travel needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <span class="value-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Traveller First
+                        </strong>
+
+                        <p>
+                            Your comfort and experience
+                            remain at the centre.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATISTICS
+====================================================== -->
+
+<section class="stats-section">
+
+    <div class="stats-inner">
+
+        <div
+            class="stat"
+            data-aos="fade-up"
+        >
+
+            <strong>
+                6+
+            </strong>
+
+            <span>
+                Curated destinations
+            </span>
+
+        </div>
+
+
+        <div
+            class="stat"
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+
+            <strong>
+                10+
+            </strong>
+
+            <span>
+                Travel experiences
+            </span>
+
+        </div>
+
+
+        <div
+            class="stat"
+            data-aos="fade-up"
+            data-aos-delay="200"
+        >
+
+            <strong>
+                24/7
+            </strong>
+
+            <span>
+                Customer assistance
+            </span>
+
+        </div>
+
+
+        <div
+            class="stat"
+            data-aos="fade-up"
+            data-aos-delay="300"
+        >
+
+            <strong>
+                100%
+            </strong>
+
+            <span>
+                Journey focused
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MISSION / VISION
+====================================================== -->
+
+<section class="mission-section">
+
+    <div class="section-heading light-heading">
+
+        <span class="section-label">
+            OUR DIRECTION
+        </span>
+
+        <h2>
+            Built around the
+            <em>journey.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="mission-grid">
+
+        <article
+            class="mission-card"
+            data-aos="fade-up"
+        >
+
+            <span class="mission-number">
+                01
+            </span>
+
+            <div class="mission-icon">
+                ✦
+            </div>
+
+            <h3>
+                Our Mission
+            </h3>
+
+            <p>
+
+                To make travel planning easier by
+                connecting travellers with thoughtfully
+                designed destinations and memorable
+                experiences.
+
+            </p>
+
+        </article>
+
+
+        <article
+            class="mission-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+        >
+
+            <span class="mission-number">
+                02
+            </span>
+
+            <div class="mission-icon">
+                ◇
+            </div>
+
+            <h3>
+                Our Vision
+            </h3>
+
+            <p>
+
+                To build a trusted travel brand where
+                every journey feels personal, inspiring
+                and worth remembering.
+
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<section
+    class="contact section"
+    id="contact"
+>
+
+    <div
+        class="section-heading"
+        data-aos="fade-up"
+    >
+
+        <span class="section-label">
+            GET IN TOUCH
+        </span>
+
+        <h2>
+            Let's plan your
+            <em>next journey.</em>
+        </h2>
+
+        <p>
+            Have a question about a package or want
+            help choosing a destination? Send us an
+            enquiry and we'll help you get started.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div
+            class="contact-info"
+            data-aos="fade-right"
+        >
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    ☎
+                </div>
+
+                <div>
+
+                    <span>
+                        CALL US
+                    </span>
+
+                    <h3>
+                        Speak with our team
+                    </h3>
+                    <a
+                        href="tel:+910000000000"
+                    >
+                        +91 00000 00000
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+                <div>
+
+                    <span>
+                        EMAIL
+                    </span>
+
+                    <h3>
+                        Send us an email
+                    </h3>
+                    <a
+                        href="mailto:anandtraveltours@gmail.com"
+                    >
+                        anandtraveltours@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    ◉
+                </div>
+
+                <div>
+
+                    <span>
+                        LOCATION
+                    </span>
+
+                    <h3>
+                        Find us
+                    </h3>
+
+                    <p>
+                        Andhra Pradesh, India
+                    </p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Andhra+Pradesh%2C+India"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open in Google Maps →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ENQUIRY FORM -->
+
+        <div
+            class="enquiry-card"
+            data-aos="fade-left"
+        >
+
+            <div class="enquiry-header">
+
+                <span>
+                    TRAVEL ENQUIRY
+                </span>
+
+                <h3>
+                    Tell us about your trip
+                </h3>
+
+                <p>
+                    Fill in your details and we'll
+                    help you plan the next step.
+                </p>
+
+            </div>
+
+
+            <form
+                id="enquiryForm"
+                class="enquiry-form"
+            >
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="enquiryName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="enquiryName"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="enquiryPhone">
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="enquiryPhone"
+                            name="phone"
+                            placeholder="+91"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="enquiryEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="enquiryEmail"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="enquiryDestination">
+                            Destination
+                        </label>
+
+                        <input
+                            type="text"
+                            id="enquiryDestination"
+                            name="destination"
+                            placeholder="Where do you want to go?"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="enquiryTravellers">
+                            Travellers
+                        </label>
+
+                        <select
+                            id="enquiryTravellers"
+                            name="travellers"
+                        >
+
+                            <option value="1">
+                                1 Person
+                            </option>
+
+                            <option value="2">
+                                2 Persons
+                            </option>
+
+                            <option value="3">
+                                3 Persons
+                            </option>
+
+                            <option value="4+">
+                                4+ Persons
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="enquiryMessage">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="enquiryMessage"
+                        name="message"
+                        rows="4"
+                        placeholder="Tell us what kind of trip you're planning..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="enquiry-submit"
+                >
+                    Send Enquiry
+                    <span>→</span>
+                </button>
+
+
+                <p
+                    id="enquiryStatus"
+                    class="enquiry-status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAP
+====================================================== -->
+
+<section class="map-section">
+
+    <div class="map-header">
+
+        <div>
+
+            <span class="section-label">
+                OUR LOCATION
+            </span>
+
+            <h2>
+                Start your journey
+                <em>with us.</em>
+            </h2>
+
+        </div>
+
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=Andhra+Pradesh%2C+India"
+            target="kurnool"
+            rel="noopener noreferrer"
+            class="map-link"
+        >
+            Open Google Maps →
+        </a>
+
+    </div>
+
+
+    <div class="map-frame">
+
+        <iframe
+            src="https://www.google.com/maps?q=Andhra%20Pradesh%2C%20India&output=embed"
+            title="Anand Travel Tours location map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL CTA
+====================================================== -->
+
+<section class="final-cta">
+
+    <div
+        class="final-cta-content"
+        data-aos="fade-up"
+    >
+
+        <span>
+            YOUR NEXT ADVENTURE IS WAITING
+        </span>
+
+        <h2>
+            Where will you
+            go next?
+        </h2>
+
+        <p>
+            Explore our destinations and find
+            a journey that feels like yours.
+        </p>
+
+        <a
+            href="#packages"
+            class="btn-primary light-button"
+        >
+            Explore Packages
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a
+                href="#home"
+                class="footer-logo"
+            >
+
+                <img
+                    src="images/logo.jpg"
+                    alt="Anand Travel Tours"
+                >
+
+                <div>
+
+                    <strong>
+                        Anand Travel
+                    </strong>
+
+                    <span>
+                        TOURS & TRAVELS
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <p>
+
+                Thoughtfully planned journeys,
+                unforgettable destinations and
+                experiences worth remembering.
+
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="#destinations">
+                Destinations
+            </a>
+
+            <a href="#packages">
+                Tour Packages
+            </a>
+
+            <a href="#about">
+                About Us
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <!-- ACCOUNT -->
+
+        <div class="footer-column">
+
+            <h4>
+                Account
+            </h4>
+
+            <a href="pages/login.html">
+                Login
+            </a>
+
+            <a href="pages/register.html">
+                Register
+            </a>
+
+            <a href="pages/my-bookings.html">
+                My Bookings
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h4>
+                Contact
+            </h4>
+
+            <span>
+                Andhra Pradesh, India
+            </span>
+
+            <a href="tel:+910000000000">
+                +91 00000 00000
+            </a>
+
+            <a href="mailto:anandtraveltours@gmail.com">
+                anandtraveltours@gmail.com
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Anand Travel Tours.
+            All rights reserved.
+        </span>
+
+        <a href="#home">
+            Back to top ↑
+        </a>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     AOS
+====================================================== -->
+
+<script
+    src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+></script>
+
+
+<script>
+
+    AOS.init({
+        duration: 850,
+        once: true,
+        offset: 80
+    });
+
+</script>
+
+
+
+<!-- =====================================================
+     CONTACT ENQUIRY UI
+====================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const enquiryForm =
+            document.getElementById(
+                "enquiryForm"
+            );
+
+        const enquiryStatus =
+            document.getElementById(
+                "enquiryStatus"
+            );
+
+
+        if (!enquiryForm) {
+            return;
+        }
+
+
+        enquiryForm.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById(
+                        "enquiryName"
+                    ).value.trim();
+
+                const phone =
+                    document.getElementById(
+                        "enquiryPhone"
+                    ).value.trim();
+
+                const email =
+                    document.getElementById(
+                        "enquiryEmail"
+                    ).value.trim();
+
+                const destination =
+                    document.getElementById(
+                        "enquiryDestination"
+                    ).value.trim();
+
+                const travellers =
+                    document.getElementById(
+                        "enquiryTravellers"
+                    ).value;
+
+                const message =
+                    document.getElementById(
+                        "enquiryMessage"
+                    ).value.trim();
+
+
+                if (
+                    !name ||
+                    !phone ||
+                    !email
+                ) {
+
+                    enquiryStatus.textContent =
+                        "Please complete the required fields.";
+
+                    enquiryStatus.className =
+                        "enquiry-status error";
+
+                    return;
+                }
+
+
+                /*
+                 * Opens the user's email application.
+                 *
+                 * Replace the destination email below
+                 * with the real business email.
+                 */
+
+                const businessEmail =
+                    "anandtraveltours@gmail.com";
+
+
+                const subject =
+                    encodeURIComponent(
+                        `Travel Enquiry - ${destination || "New Trip"}`
+                    );
+
+
+                const body =
+                    encodeURIComponent(
+                        `Hello Anand Travel Tours,
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Destination: ${destination || "Not specified"}
+Travellers: ${travellers}
+
+Message:
+${message || "No additional message."}`
+                    );
+
+
+                window.location.href =
+                    `mailto:${businessEmail}?subject=${subject}&body=${body}`;
+
+
+                enquiryStatus.textContent =
+                    "Opening your email application...";
+
+                enquiryStatus.className =
+                    "enquiry-status success";
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+
+<!-- =====================================================
+     MAIN JAVASCRIPT
+====================================================== -->
+
+<script src="js/main.js"></script>
+
+
+</body>
+
+</html>

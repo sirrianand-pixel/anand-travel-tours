@@ -1,0 +1,534 @@
+/* =========================================================
+   ANAND TRAVEL TOURS
+   PREMIUM REGISTER PAGE
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    min-height: 100%;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow-x: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(4, 31, 49, 0.88),
+            rgba(8, 67, 91, 0.66)
+        ),
+        url("../images/auth-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+
+/* =========================================================
+   DECORATIVE LIGHT
+   ========================================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 420px;
+
+    height: 420px;
+
+    top: -180px;
+
+    right: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(214, 168, 79, 0.22),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 350px;
+
+    height: 350px;
+
+    bottom: -180px;
+
+    left: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(79, 168, 214, 0.18),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   REGISTER CARD
+   ========================================================= */
+
+.container {
+    width: min(470px, 100%);
+
+    padding: 38px 42px 34px;
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.22),
+            rgba(255, 255, 255, 0.10)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    border-radius: 26px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(22px);
+
+    -webkit-backdrop-filter: blur(22px);
+
+    animation: cardEnter 0.6s ease both;
+}
+
+
+@keyframes cardEnter {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.auth-logo {
+    display: block;
+
+    width: 170px;
+
+    height: 72px;
+
+    max-width: 170px;
+
+    max-height: 72px;
+
+    object-fit: contain;
+
+    margin: 0 auto 17px;
+
+    border-radius: 8px;
+
+    filter:
+        drop-shadow(
+            0 5px 12px rgba(0, 0, 0, 0.18)
+        );
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.container h1 {
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.5px;
+}
+
+
+.container h1::after {
+    content: "";
+
+    display: block;
+
+    width: 48px;
+
+    height: 3px;
+
+    margin: 13px auto 24px;
+
+    border-radius: 20px;
+
+    background: #d6a84f;
+}
+
+
+/* =========================================================
+   REGISTER FORM
+   ========================================================= */
+
+#registerForm {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+#registerForm input {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    outline: none;
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    color: #18232c;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+#registerForm input::placeholder {
+    color: #87929a;
+}
+
+
+#registerForm input:hover {
+    background: #ffffff;
+}
+
+
+#registerForm input:focus {
+    background: #ffffff;
+
+    border-color: #d6a84f;
+
+    box-shadow:
+        0 0 0 4px rgba(214, 168, 79, 0.18);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+   ========================================================= */
+
+#registerForm button {
+    width: 100%;
+
+    height: 54px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b5277,
+            #0b3d5c
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(4, 35, 52, 0.28);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+#registerForm button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #0d648d,
+            #0b4668
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(4, 35, 52, 0.35);
+}
+
+
+#registerForm button:active {
+    transform: translateY(0);
+}
+
+
+#registerForm button:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   LOGIN LINK
+   ========================================================= */
+
+.auth-link {
+    margin-top: 22px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+.auth-link a {
+    color: #f2c96b;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+.auth-link a:hover {
+    color: #ffffff;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   REGISTER MESSAGE
+   ========================================================= */
+
+#registerMessage {
+    margin-top: 14px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 18px;
+
+        background-attachment: scroll;
+    }
+
+
+    .container {
+        width: 100%;
+
+        padding: 34px 24px 30px;
+
+        border-radius: 22px;
+    }
+
+
+    .auth-logo {
+        width: 150px;
+
+        height: 64px;
+
+        max-width: 150px;
+
+        max-height: 64px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .container h1 {
+        font-size: 30px;
+    }
+
+
+    #registerForm {
+        gap: 12px;
+    }
+
+
+    #registerForm input,
+    #registerForm button {
+        height: 52px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 12px;
+    }
+
+
+    .container {
+        padding: 28px 19px 25px;
+
+        border-radius: 19px;
+    }
+
+
+    .auth-logo {
+        width: 135px;
+
+        height: 58px;
+
+        max-width: 135px;
+
+        max-height: 58px;
+    }
+
+
+    .container h1 {
+        font-size: 27px;
+    }
+
+
+    #registerForm input,
+    #registerForm button {
+        height: 50px;
+    }
+}

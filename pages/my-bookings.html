@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        My Bookings - Anand Travel Tours
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/my-bookings.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         NAVBAR
+    =================================================== -->
+
+    <nav class="bookings-nav">
+
+        <a
+            href="../index.html"
+            class="bookings-logo"
+        >
+
+            <img
+                src="../images/logo.jpg"
+                alt="Anand Travel Tours"
+            >
+
+            <span>
+                Anand Travel Tours
+            </span>
+
+        </a>
+
+
+        <div class="nav-actions">
+
+            <a
+                href="../index.html"
+                class="nav-link"
+            >
+                Home
+            </a>
+
+
+            <button
+                type="button"
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==================================================
+         MAIN
+    =================================================== -->
+
+    <main class="my-bookings-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <span>
+                YOUR JOURNEYS
+            </span>
+
+            <h1>
+                My Bookings
+            </h1>
+
+            <p>
+                View and track all your tour reservations.
+            </p>
+
+        </section>
+
+
+
+        <!-- LOADING -->
+
+        <div
+            id="loadingMessage"
+            class="state-message"
+        >
+
+            Loading your bookings...
+
+        </div>
+
+
+
+        <!-- ERROR -->
+
+        <div
+            id="errorMessage"
+            class="state-message error"
+            style="display: none;"
+        >
+        </div>
+
+
+
+        <!-- EMPTY -->
+
+        <div
+            id="emptyMessage"
+            class="empty-bookings"
+            style="display: none;"
+        >
+
+            <div class="empty-icon">
+                🧳
+            </div>
+
+            <h2>
+                No bookings yet
+            </h2>
+
+            <p>
+                You haven't booked a tour yet.
+            </p>
+
+            <a
+                href="../index.html#packages"
+                class="browse-btn"
+            >
+                Explore Packages
+            </a>
+
+        </div>
+
+
+
+        <!-- BOOKINGS -->
+
+        <section
+            id="bookingsContainer"
+            class="bookings-container"
+        >
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script
+        src="../js/my-bookings.js"
+    ></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Tour Package - Anand Travel Tours
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/package-details.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         PACKAGE DETAILS
+    =================================================== -->
+
+    <main
+        class="details-container"
+        id="packageDetails"
+    >
+
+
+        <!-- LOADING -->
+
+        <div
+            class="loading"
+            id="packageLoading"
+        >
+
+            Loading package...
+
+        </div>
+
+
+        <!-- PACKAGE CONTENT -->
+
+        <div
+            class="package-details-card"
+            id="packageContent"
+            style="display: none;"
+        >
+
+
+            <!-- IMAGE -->
+
+            <div class="package-details-image">
+
+                <img
+                    id="packageImage"
+                    src=""
+                    alt="Tour package"
+                >
+
+
+                <span
+                    id="packageTag"
+                    class="package-tag"
+                    style="display: none;"
+                >
+                </span>
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="package-details-content">
+
+
+                <h1 id="packageTitle">
+                    Loading...
+                </h1>
+
+
+                <p
+                    id="packageDestination"
+                    class="package-location"
+                >
+                </p>
+
+
+                <p
+                    id="packageDescription"
+                    class="package-description"
+                >
+                </p>
+
+
+
+                <!-- PACKAGE INFO -->
+
+                <div class="package-info">
+
+
+                    <div class="info-item">
+
+                        <strong>
+                            Duration
+                        </strong>
+
+                        <span
+                            id="packageDuration"
+                        >
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong>
+                            Persons
+                        </strong>
+
+                        <span
+                            id="packagePersons"
+                        >
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong>
+                            Price
+                        </strong>
+
+                        <span
+                            id="packagePrice"
+                            class="package-price"
+                        >
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ACTIONS -->
+
+                <div class="package-actions">
+
+
+                    <button
+                        type="button"
+                        id="bookNowBtn"
+                        class="book-now-btn"
+                    >
+                        Book Now
+                    </button>
+
+
+                    <a
+                        href="../index.html#packages"
+                        class="back-btn"
+                    >
+                        ← Back to Packages
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ERROR -->
+
+    <div
+        id="packageError"
+        class="package-error"
+        style="display: none;"
+    >
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        src="../js/package-details.js"
+    ></script>
+
+
+</body>
+
+</html>

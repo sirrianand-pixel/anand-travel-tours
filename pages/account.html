@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        My Account - Anand Travel Tours
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/account.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         NAVBAR
+    =================================================== -->
+
+    <nav class="account-nav">
+
+        <a
+            href="../index.html"
+            class="account-logo"
+        >
+
+            <img
+                src="../images/logo.jpg"
+                alt="Anand Travel Tours"
+            >
+
+            <span>
+                Anand Travel Tours
+            </span>
+
+        </a>
+
+
+        <div class="nav-actions">
+
+            <a
+                href="../index.html"
+                class="nav-link"
+            >
+                Home
+            </a>
+
+
+            <a
+                href="my-bookings.html"
+                class="nav-link"
+            >
+                My Bookings
+            </a>
+
+
+            <button
+                type="button"
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==================================================
+         MAIN
+    =================================================== -->
+
+    <main class="account-container">
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <span>
+                MY ACCOUNT
+            </span>
+
+            <h1>
+                Account Overview
+            </h1>
+
+            <p>
+                Manage your profile and view your travel activity.
+            </p>
+
+        </section>
+
+
+
+        <!-- LOADING -->
+
+        <div
+            id="loadingMessage"
+            class="state-message"
+        >
+            Loading account...
+        </div>
+
+
+
+        <!-- ERROR -->
+
+        <div
+            id="errorMessage"
+            class="state-message error"
+            style="display: none;"
+        >
+        </div>
+
+
+
+        <!-- ACCOUNT CONTENT -->
+
+        <div
+            id="accountContent"
+            style="display: none;"
+        >
+
+
+            <!-- PROFILE -->
+
+            <section class="profile-card">
+
+
+                <div class="profile-avatar">
+                    👤
+                </div>
+
+
+                <div class="profile-info">
+
+                    <h2 id="fullName">
+                        -
+                    </h2>
+
+                    <p id="email">
+                        -
+                    </p>
+
+                    <p id="phone">
+                        -
+                    </p>
+
+                    <span id="roleBadge">
+                        User
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- DETAILS -->
+
+            <section class="details-card">
+
+                <h2>
+                    Personal Information
+                </h2>
+
+
+                <div class="details-grid">
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Full Name
+                        </span>
+
+                        <strong id="detailFullName">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong id="detailEmail">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Phone
+                        </span>
+
+                        <strong id="detailPhone">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Member Since
+                        </span>
+
+                        <strong id="createdAt">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- BOOKING STATISTICS -->
+
+            <section class="stats-section">
+
+                <h2>
+                    Booking Overview
+                </h2>
+
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📋
+                        </div>
+
+                        <span>
+                            Total Bookings
+                        </span>
+
+                        <strong id="totalBookings">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-card confirmed">
+
+                        <div class="stat-icon">
+                            ✅
+                        </div>
+
+                        <span>
+                            Confirmed
+                        </span>
+
+                        <strong id="confirmedBookings">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-card pending">
+
+                        <div class="stat-icon">
+                            ⏳
+                        </div>
+
+                        <span>
+                            Pending
+                        </span>
+
+                        <strong id="pendingBookings">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-card cancelled">
+
+                        <div class="stat-icon">
+                            ❌
+                        </div>
+
+                        <span>
+                            Cancelled
+                        </span>
+
+                        <strong id="cancelledBookings">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ACTIONS -->
+
+            <section class="account-actions">
+
+                <a
+                    href="my-bookings.html"
+                    class="primary-btn"
+                >
+                    View My Bookings
+                </a>
+
+
+                <a
+                    href="../index.html#packages"
+                    class="secondary-btn"
+                >
+                    Explore Packages
+                </a>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <script src="../js/account.js"></script>
+
+</body>
+
+</html>
