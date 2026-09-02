@@ -1,0 +1,24 @@
+{
+  "name": "anand-travel-tours",
+  "version": "1.0.0",
+  "description": "Anand Travel Tours - Full Stack Travel and Tour Booking Platform",
+  "main": "backend/server/server.js",
+  "scripts": {
+    "start": "node backend/server/server.js",
+    "dev": "nodemon backend/server/server.js",
+    "test": "node backend/server/test_runner.js"
+  },
+  "keywords": [
+    "travel",
+    "tours",
+    "booking",
+    "tourism",
+    "express",
+    "mysql"
+  ],
+  "author": "Anand Travel Tours",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

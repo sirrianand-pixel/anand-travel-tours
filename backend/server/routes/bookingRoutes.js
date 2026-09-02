@@ -1,63 +1,41 @@
 const express = require("express");
-
-const router =
-    express.Router();
-
+const router = express.Router();
 
 const {
-
     createBooking,
-
     getBookings,
-
     getMyBookings,
-
     getBooking,
-
     updateBookingStatus
-
 } = require("../controllers/bookingController");
 
-
 const {
-
     authenticateToken,
-
     requireAdmin
-
 } = require("../middleware/authMiddleware");
 
-
 // ==========================================================
-// CREATE BOOKING
-// CUSTOMER - LOGIN REQUIRED
+// CREATE BOOKING (CUSTOMER - LOGIN REQUIRED)
 // ==========================================================
-
 router.post(
     "/",
     authenticateToken,
     createBooking
 );
 
-
 // ==========================================================
-// GET MY BOOKINGS
-// CUSTOMER
+// GET MY BOOKINGS (CUSTOMER)
 // IMPORTANT: This must come BEFORE /:id
 // ==========================================================
-
 router.get(
     "/my",
     authenticateToken,
     getMyBookings
 );
 
-
 // ==========================================================
-// GET ALL BOOKINGS
-// ADMIN ONLY
+// GET ALL BOOKINGS (ADMIN ONLY)
 // ==========================================================
-
 router.get(
     "/",
     authenticateToken,
@@ -65,25 +43,18 @@ router.get(
     getBookings
 );
 
-
 // ==========================================================
-// GET ONE BOOKING
-// ADMIN ONLY
+// GET ONE BOOKING (ADMIN OR BOOKING OWNER)
 // ==========================================================
-
 router.get(
     "/:id",
     authenticateToken,
-    requireAdmin,
     getBooking
 );
 
-
 // ==========================================================
-// UPDATE BOOKING STATUS
-// ADMIN ONLY
+// UPDATE BOOKING STATUS (ADMIN ONLY)
 // ==========================================================
-
 router.patch(
     "/:id/status",
     authenticateToken,
@@ -91,6 +62,4 @@ router.patch(
     updateBookingStatus
 );
 
-
-module.exports =
-    router;
+module.exports = router;

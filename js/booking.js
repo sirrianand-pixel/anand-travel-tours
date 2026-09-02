@@ -3,7 +3,7 @@
 // CUSTOMER BOOKING
 // ==========================================================
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "/api";
 
 // ==========================================================
 // GET TOKEN
@@ -190,7 +190,7 @@ function displayPackageSummary(packageData) {
 
     const image =
         packageData.image
-            ? `../images/packages/${encodeURIComponent(
+            ? `../images/destinations/${encodeURIComponent(
                 packageData.image
             )}`
             : "../images/logo.jpg";

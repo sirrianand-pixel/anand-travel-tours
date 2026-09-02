@@ -3,7 +3,7 @@
 // PACKAGE DETAILS
 // ==========================================================
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "/api";
 
 // ==========================================================
 // GET PACKAGE ID FROM URL
@@ -114,7 +114,7 @@ function setPackageImage(packageData) {
     // If database contains an image
     if (packageData.image) {
         packageImage.src =
-            `../images/packages/${encodeURIComponent(packageData.image)}`;
+            `../images/destinations/${encodeURIComponent(packageData.image)}`;
 
         packageImage.alt =
             packageData.title || "Tour package";

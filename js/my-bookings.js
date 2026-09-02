@@ -4,8 +4,7 @@
 // ==========================================================
 
 
-const API_BASE =
-    "http://localhost:5000/api";
+const API_BASE = "/api";
 
 
 // ==========================================================
@@ -431,7 +430,7 @@ async function loadMyBookings() {
 
                         <img
                             class="booking-image"
-                            src="../images/packages/${encodeURIComponent(
+                            src="../images/destinations/${encodeURIComponent(
                                 booking.package_image
                             )}"
                             alt="${escapeHtml(

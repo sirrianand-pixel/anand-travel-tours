@@ -41,7 +41,7 @@ form.addEventListener("submit", async function (e) {
         // =================================================
 
         const response = await fetch(
-            "http://localhost:5000/api/auth/register",
+            "/api/auth/register",
             {
                 method: "POST",
 
@@ -84,10 +84,11 @@ form.addEventListener("submit", async function (e) {
         // =================================================
 
         console.log(
-            "Registration successful. Redirecting to home..."
+            "Registration successful. Redirecting to login..."
         );
 
-        window.location.replace("../index.html");
+        alert("Registration successful! Please login.");
+        window.location.replace("login.html");
 
     }
 
