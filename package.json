@@ -2,11 +2,24 @@
   "name": "anand-travel-tours",
   "version": "1.0.0",
   "description": "Anand Travel Tours - Full Stack Travel and Tour Booking Platform",
-  "main": "backend/server/server.js",
+  "main": "api/index.js",
   "scripts": {
     "start": "node backend/server/server.js",
     "dev": "nodemon backend/server/server.js",
     "test": "node backend/server/test_runner.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.14.0",
+    "nodemailer": "^9.0.5",
+    "razorpay": "^2.9.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   },
   "keywords": [
     "travel",
